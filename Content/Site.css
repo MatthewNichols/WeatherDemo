@@ -1,85 +1,90 @@
 ﻿body {
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
+  font-size: .85em;
+  font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+  color: #232323;
+  background-color: #fff;
 }
-
-header, footer, nav, section {
-    display: block;
+header,
+footer,
+nav,
+section {
+  display: block;
 }
-
-
 /* Styles for basic forms
 -----------------------------------------------------------*/
 fieldset {
-    border: 1px solid #ddd;
-    padding: 0 1.4em 1.4em 1.4em;
-    margin: 0 0 1.5em 0;
+  border: 1px solid #ddd;
+  padding: 0 1.4em 1.4em 1.4em;
+  margin: 0 0 1.5em 0;
 }
-
 legend {
-    font-size: 1.2em;
-    font-weight: bold;
+  font-size: 1.2em;
+  font-weight: bold;
 }
-
 textarea {
-    min-height: 75px;
+  min-height: 75px;
 }
-
 .editor-label {
-    margin: 1em 0 0 0;
+  margin: 1em 0 0 0;
 }
-
 .editor-field {
-    margin: 0.5em 0 0 0;
+  margin: 0.5em 0 0 0;
 }
-
-
 /* Styles for validation helpers
 -----------------------------------------------------------*/
 .field-validation-error {
-    color: #f00;
+  color: #f00;
 }
-
 .field-validation-valid {
-    display: none;
+  display: none;
 }
-
 .input-validation-error {
-    border: 1px solid #f00;
-    background-color: #fee;
+  border: 1px solid #f00;
+  background-color: #fee;
 }
-
 .validation-summary-errors {
-    font-weight: bold;
-    color: #f00;
+  font-weight: bold;
+  color: #f00;
 }
-
 .validation-summary-valid {
-    display: none;
+  display: none;
 }
-
-
 /* layout */
-
-.clear{ clear: both; }
-
-#cities {
-    position: relative;
-    float: left;
+.currently {
+  position: relative;
 }
-
-.city {
-    border: #232323 solid 1px;
-    padding: 5px;
+.currently .left {
+  float: left;
+  margin: 20px;
 }
-
-.day {
-    width: 250px;
-    float: left;
-    height: 375px;
-    border: #232323 solid 1px;
-    margin: 0 5px 0 5px;
-    padding: 0 5px;
+.currently .right {
+  float: left;
+  margin: 20px;
 }
+.days {
+  clear: both;
+}
+.days .day {
+  width: 150px;
+  float: left;
+  height: 275px;
+  border: #232323 solid 1px;
+  margin: 0 5px 0 5px;
+  padding: 0 5px;
+}
+.days .day .conditionIcon {
+  height: 100px;
+  margin: 10px 20px;
+}
+.details {
+  clear: both;
+  position: relative;
+}
+.details .section {
+  float: left;
+  width: 200px;
+}
+.details .moon {
+  width: auto;
+}
+/*# sourceMappingURL=Site.css.map */

@@ -2,10 +2,12 @@
     ViewBag.Title = "Index";
 }
 
+
+
 <div class="currently">
     <h4>Currently</h4>
     <div class="left">
-        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+        <img src="~/Content/images/sunny.jpg" alt="Sunny" />
     </div>
     <div class="right">
         <div class="temp">50°F</div>
@@ -15,26 +17,26 @@
 <div class="days">
     <div class="today day">
         <h4>Today</h4>
-        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="dayIcon" />
         <div class="temp">High: 50°F</div>
         <div class="temp">Low: 50°F</div>
     </div>
     <div class="tomorrow day">
         <h4>Tomorrow</h4>
-        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="dayIcon" />
         <div class="temp">High: 50°F</div>
         <div class="temp">Low: 50°F</div>
     </div>
     <div class="dayAfter day    ">
         <h4>Day After Tomorrow</h4>
-        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="dayIcon" />
         <div class="temp">High: 50°F</div>
         <div class="temp">Low: 50°F</div>
     </div>
 </div>
 
-<div class="details" style="display: none;">
-    <div class="other section">
+<div class="details">
+    <div class="other">
         <div class="wind">Wind: 1-5 MPH SW</div>
         <div class="humidity">Humidity: 47%</div>
     </div>
@@ -42,7 +44,7 @@
         <div>Sunrise: 6:35 AM</div>
         <div>Sunset: 5:49 PM</div>
     </div>
-    <div class="moon section">
+    <div class="moon">
         <div>Moonrise: 5:09 AM</div>
         <div>Moonset: 4:18 PM</div>
         <div>Waning Crescent, 4% of the Moon is Illuminated</div>
@@ -53,11 +55,7 @@
 
 
 
-@section scripts
+    @section scripts
 {
-    @Scripts.Render("~/bundles/weatherapp")        
-    
-    <script>
-        Cachematrix.WeatherApp.init();
-    </script>
-}
+        <script src="~/Scripts/Pages/Home.Index.js"></script>
+    }
