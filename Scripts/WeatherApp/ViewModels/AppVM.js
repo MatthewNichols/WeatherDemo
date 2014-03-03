@@ -3,13 +3,13 @@
     (function (WeatherApp) {
         (function (ViewModels) {
             var AppVM = (function () {
-                function AppVM(dataService) {
+                function AppVM(dataService, dataMapper) {
                     this.dataService = dataService;
+                    this.dataMapper = dataMapper;
                     var data = dataService.getData();
-                    this.parseData(data);
+                    var weatherData = dataMapper.mapDataToWeatherData(data);
+                    this.homePageVm = new Cachematrix.WeatherApp.ViewModels.HomePageVM(weatherData);
                 }
-                AppVM.prototype.parseData = function (rawData) {
-                };
                 return AppVM;
             })();
             ViewModels.AppVM = AppVM;

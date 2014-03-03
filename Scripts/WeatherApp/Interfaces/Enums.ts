@@ -5,6 +5,7 @@
         Cloudy
     }
 
+    //Examples
     //console.log(Condition.Cloudy); //Yields 1
     //console.log(Condition[Condition.Cloudy]); //Yields "Cloudy"
     //console.log(Condition["Cloudy"]); //Yields 1

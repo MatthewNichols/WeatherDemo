@@ -7,7 +7,7 @@ QUnit.module("DataMapperTests");
 var services = Cachematrix.WeatherApp.Services;
 var enums = Cachematrix.WeatherApp.Interfaces.Enums;
 
-test("test", function () {
+test("test mapping", function () {
     var dataMapper = new services.DataMapper();
 
     var rawData = {

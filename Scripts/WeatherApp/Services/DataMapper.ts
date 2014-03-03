@@ -13,7 +13,9 @@
             if (data.currentConditions) {
                 output.currentConditions.temp = data.currentConditions.temp;
                 output.currentConditions.windSpeed = data.currentConditions.windSpeed;
-                output.currentConditions.windDirection = enums.Direction[data.currentConditions.windDirection];
+                //Because of the structure of TypeScript enums we need to make sure 
+                // that the compiler knows that the incoming value is a string
+                output.currentConditions.windDirection = enums.Direction[<string>data.currentConditions.windDirection];
             }
 
             output.days = new Array<DayData>();
@@ -55,7 +57,7 @@
     {
         temp: number;
         windSpeed: number;
-        windDirection: string;
+        windDirection: enums.Direction;
     }
 
     export class DayData

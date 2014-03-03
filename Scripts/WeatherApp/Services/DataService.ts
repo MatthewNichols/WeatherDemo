@@ -17,7 +17,7 @@
     {
         getData(): any {
             return {
-                currentConditions: { temp: 50, windSpeed: 5, windDirection: "NW" },
+                currentConditions: { temp: 52, windSpeed: 5, windDirection: "NW" },
                 days: [
                     { dayIndex: 0, lowTemp: 50, highTemp: 50, windSpeed: 5, windDirection: "NW", humidity: 0.47, sunrise: 635, sunset: 1749, moonrise: 635, moonset: 1749, moonDesc: "Waning Crescent, 4% of the Moon is Illuminated" },
                     { dayIndex: 1, lowTemp: 50, highTemp: 50, windSpeed: 5, windDirection: "NW", humidity: 0.47, sunrise: 635, sunset: 1749, moonrise: 635, moonset: 1749, moonDesc: "Waning Crescent, 4% of the Moon is Illuminated" },

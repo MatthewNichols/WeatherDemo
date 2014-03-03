@@ -5,7 +5,10 @@
 
      export function init() {
          var dataService = services.getDataService();
-         var appVm = new vms.AppVM(dataService);
+         var dataMapper = new services.DataMapper();
+         var appVm = new vms.AppVM(dataService, dataMapper);
+
+         console.log(appVm);
 
          ko.applyBindings(appVm);
      }

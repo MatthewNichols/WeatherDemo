@@ -2,34 +2,38 @@
     ViewBag.Title = "Index";
 }
 
-<div class="currently">
-    <h4>Currently</h4>
-    <div class="left">
-        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+<div data-bind="with: homePageVm">
+    <div class="currently" data-bind="with: currentConditions">
+        <h4>Currently</h4>
+        <div class="left">
+            <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+        </div>
+        <div class="right">
+            <div class="temp" data-bind="text: tempFormatted"></div>
+            <div class="wind">
+                Wind: <span data-bind="text: windFormatted"></span>
+            </div>
+        </div>
     </div>
-    <div class="right">
-        <div class="temp">50°F</div>
-        <div class="wind">Wind: 5 NW</div>
-    </div>
-</div>
-<div class="days">
-    <div class="today day">
-        <h4>Today</h4>
-        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
-        <div class="temp">High: 50°F</div>
-        <div class="temp">Low: 50°F</div>
-    </div>
-    <div class="tomorrow day">
-        <h4>Tomorrow</h4>
-        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
-        <div class="temp">High: 50°F</div>
-        <div class="temp">Low: 50°F</div>
-    </div>
-    <div class="dayAfter day    ">
-        <h4>Day After Tomorrow</h4>
-        <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
-        <div class="temp">High: 50°F</div>
-        <div class="temp">Low: 50°F</div>
+    <div class="days">
+        <div class="today day">
+            <h4>Today</h4>
+            <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+            <div class="temp">High: 50°F</div>
+            <div class="temp">Low: 50°F</div>
+        </div>
+        <div class="tomorrow day">
+            <h4>Tomorrow</h4>
+            <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+            <div class="temp">High: 50°F</div>
+            <div class="temp">Low: 50°F</div>
+        </div>
+        <div class="dayAfter day    ">
+            <h4>Day After Tomorrow</h4>
+            <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
+            <div class="temp">High: 50°F</div>
+            <div class="temp">Low: 50°F</div>
+        </div>
     </div>
 </div>
 
@@ -55,8 +59,8 @@
 
 @section scripts
 {
-    @Scripts.Render("~/bundles/weatherapp")        
-    
+    @Scripts.Render("~/bundles/weatherapp")
+
     <script>
         Cachematrix.WeatherApp.init();
     </script>
