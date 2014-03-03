@@ -11,6 +11,7 @@ namespace WeatherDemo
             bundles.Add(new ScriptBundle("~/bundles/jquery")
                 .Include("~/Scripts/jquery-{version}.js")
                 .Include("~/Scripts/knockout-{version}.js")
+                .Include("~/Scripts/underscore.js")
             );
 
             bundles.Add(new ScriptBundle("~/bundles/weatherapp")

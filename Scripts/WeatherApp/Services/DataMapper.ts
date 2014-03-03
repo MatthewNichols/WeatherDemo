@@ -21,6 +21,7 @@
             output.days = new Array<DayData>();
             if (data.days)
             {
+                //TODO: can this be cleaner with underscore?
                 for (var i = 0; i < data.days.length; i++) {
                     var day = data.days[i];
                     var dayData = new DayData();
@@ -49,29 +50,29 @@
     
     export class WeatherData
     {
-        currentConditions: CurrentConditions = new CurrentConditions();
-        days: Array<DayData>
+        public currentConditions: CurrentConditions = new CurrentConditions();
+        public days: Array<DayData>
     }
 
     export class CurrentConditions
     {
-        temp: number;
-        windSpeed: number;
-        windDirection: enums.Direction;
+        public temp: number;
+        public windSpeed: number;
+        public windDirection: enums.Direction;
     }
 
     export class DayData
     {
-        dayIndex: enums.DayIndex;
-        lowTemp: number;
-        highTemp: number;
-        windSpeed: number;
-        windDirection: enums.Direction;
-        humidity: number;
-        sunrise: string;
-        sunset: string;
-        moonrise: string;
-        moonset: string;
-        moonDesc: string;
+        public dayIndex: enums.DayIndex;
+        public lowTemp: number;
+        public highTemp: number;
+        public windSpeed: number;
+        public windDirection: enums.Direction;
+        public humidity: number;
+        public sunrise: string;
+        public sunset: string;
+        public moonrise: string;
+        public moonset: string;
+        public moonDesc: string;
     }
 }

@@ -18,21 +18,15 @@
     <div class="days">
         <div class="today day">
             <h4>Today</h4>
-            <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
-            <div class="temp">High: 50°F</div>
-            <div class="temp">Low: 50°F</div>
+            <div data-bind="template: {name: 'day-template', data: today }"></div>
         </div>
         <div class="tomorrow day">
             <h4>Tomorrow</h4>
-            <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
-            <div class="temp">High: 50°F</div>
-            <div class="temp">Low: 50°F</div>
+            <div data-bind="template: {name: 'day-template', data: tomorrow }"></div>
         </div>
-        <div class="dayAfter day    ">
+        <div class="dayAfterTomorrow day">
             <h4>Day After Tomorrow</h4>
-            <img src="~/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
-            <div class="temp">High: 50°F</div>
-            <div class="temp">Low: 50°F</div>
+            <div data-bind="template: {name: 'day-template', data: dayAfterTomorrow }"></div>
         </div>
     </div>
 </div>
@@ -53,9 +47,17 @@
     </div>
 </div>
 
+<script id="day-template" type="text/html">
+    <img src="/Content/images/sunny.jpg" alt="Sunny" class="conditionIcon" />
 
-
-
+    <div class="temp">
+        High: <span data-bind="text: highTempFormatted"></span>
+    </div>
+    <div class="temp">
+        Low: <span data-bind="text: lowTempFormatted"></span>
+    </div>    
+</script>
+      
 
 @section scripts
 {

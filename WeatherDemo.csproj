@@ -214,6 +214,8 @@
     <Content Include="Scripts\knockout-3.0.0.debug.js" />
     <Content Include="Scripts\knockout-3.0.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -227,6 +229,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\underscore.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -239,6 +242,7 @@
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\qunit\qunit.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\underscore\underscore.d.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Init.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\Enums.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IAppVM.ts" />
@@ -248,6 +252,7 @@
     <TypeScriptCompile Include="Scripts\WeatherApp\Services\DataService.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Tests\DataMapperTests.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\ViewModels\AppVM.ts" />
+    <TypeScriptCompile Include="Scripts\WeatherApp\ViewModels\CurrentConditionsVM.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\ViewModels\DayVM.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\ViewModels\DetailsPageVM.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\ViewModels\HomePageVM.ts" />

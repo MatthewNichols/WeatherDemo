@@ -8,37 +8,30 @@
     {
         constructor(data: services.WeatherData) {
             this.currentConditions = new CurrentConditionsVM(data.currentConditions);
-            console.log(data);
+
+            this.days = _.map(data.days, (day)=> {
+                return new DayVM(day);
+            });
         }
 
         public currentConditions: CurrentConditionsVM;
+        public days: Array<DayVM>
 
+        public today: KnockoutComputed<DayVM> = ko.computed({
+            read: () => { return this.days[0]; },
+            deferEvaluation: true
+        });
+
+        public tomorrow: KnockoutComputed<DayVM> = ko.computed({
+            read: () => { return this.days[1]; },
+            deferEvaluation: true
+        });
+
+        public dayAfterTomorrow: KnockoutComputed<DayVM> = ko.computed({
+            read: () => { return this.days[2]; },
+            deferEvaluation: true
+        });
     }
 
-    export class CurrentConditionsVM {
-        
-        constructor(data: services.CurrentConditions) {
-            this.temp = ko.observable(data.temp);
-            this.windSpeed = ko.observable(data.windSpeed);
-            this.windDirection = ko.observable(data.windDirection);
-
-            this.tempFormatted = ko.computed(() =>
-            {
-                //TODO: add switching between F and C scales
-                return this.temp() + "° F";
-            });
-            this.windFormatted = ko.computed(()=> {
-                return this.windSpeed() + " " + enums.Direction[this.windDirection()];
-            });
-        }
-
-        public temp: KnockoutObservable<number>;
-        public windSpeed: KnockoutObservable<number>;
-        public windDirection: KnockoutObservable<enums.Direction>;
-
-        public tempFormatted: KnockoutComputed<string>;
-        public windFormatted: KnockoutComputed<string>;
-
-    }
-
+    
 }
