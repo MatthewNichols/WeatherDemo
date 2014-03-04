@@ -32,7 +32,12 @@
         });
 
         public imageIconSrc: KnockoutComputed<string> = ko.computed({
-            read: () => { return "/Content/images/" + this.basicCondition() + ".png"; },
+            read: ()=> { return "/Content/images/" + enums.BasicCondition[this.basicCondition()] + ".png"; },
+            deferEvaluation: true
+        });
+
+        public basicConditionName: KnockoutComputed<string> = ko.computed({
+            read: () => { return enums.BasicCondition[this.basicCondition()]; },
             deferEvaluation: true
         });
     }

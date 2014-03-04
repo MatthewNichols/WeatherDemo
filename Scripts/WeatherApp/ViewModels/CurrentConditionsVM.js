@@ -22,7 +22,13 @@
                     });
                     this.imageIconSrc = ko.computed({
                         read: function () {
-                            return "/Content/images/" + _this.basicCondition() + ".png";
+                            return "/Content/images/" + enums.BasicCondition[_this.basicCondition()] + ".png";
+                        },
+                        deferEvaluation: true
+                    });
+                    this.basicConditionName = ko.computed({
+                        read: function () {
+                            return enums.BasicCondition[_this.basicCondition()];
                         },
                         deferEvaluation: true
                     });

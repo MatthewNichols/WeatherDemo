@@ -2,6 +2,8 @@
 (function (Cachematrix) {
     (function (WeatherApp) {
         (function (ViewModels) {
+            var enums = Cachematrix.WeatherApp.Interfaces.Enums;
+
             var DayVM = (function () {
                 function DayVM(day) {
                     var _this = this;
@@ -17,11 +19,24 @@
                         },
                         deferEvaluation: true
                     });
+                    this.imageIconSrc = ko.computed({
+                        read: function () {
+                            return "/Content/images/" + enums.BasicCondition[_this.basicCondition()] + ".png";
+                        },
+                        deferEvaluation: true
+                    });
+                    this.basicConditionName = ko.computed({
+                        read: function () {
+                            return enums.BasicCondition[_this.basicCondition()];
+                        },
+                        deferEvaluation: true
+                    });
                     this.dayIndex = ko.observable(day.dayIndex);
                     this.lowTemp = ko.observable(day.lowTemp);
                     this.highTemp = ko.observable(day.highTemp);
                     this.windSpeed = ko.observable(day.windSpeed);
                     this.windDirection = ko.observable(day.windDirection);
+                    this.basicCondition = ko.observable(day.basicCondition);
                     this.humidity = ko.observable(day.humidity);
                     this.sunrise = ko.observable(day.sunrise);
                     this.sunset = ko.observable(day.sunset);

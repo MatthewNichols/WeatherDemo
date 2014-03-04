@@ -34,6 +34,7 @@
                             //Because of the structure of TypeScript enums we need to make sure
                             // that the compiler knows that the incoming value is a string
                             dayData.windDirection = enums.Direction[day.windDirection];
+                            dayData.basicCondition = enums.BasicCondition[day.basicCondition];
                             dayData.humidity = day.humidity;
                             dayData.sunrise = day.sunrise;
                             dayData.sunset = day.sunset;

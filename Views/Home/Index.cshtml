@@ -6,7 +6,7 @@
     <div class="currently" data-bind="with: currentConditions">
         <h4>Currently</h4>
         <div class="left">
-            <img alt="Sunny" class="conditionIcon" data-bind="attr: {src: imageIconSrc, title: basicCondition, alt: basicCondition}" />
+            <img alt="Sunny" class="conditionIcon" data-bind="attr: {src: imageIconSrc, title: basicConditionName, alt: basicConditionName}" />
         </div>
         <div class="right">
             <div class="temp" data-bind="text: tempFormatted"></div>
@@ -48,7 +48,7 @@
 </div>
 
 <script id="day-template" type="text/html">
-    <img src="/Content/images/sunny.png" alt="Sunny" class="conditionIcon" />
+    <img alt="Sunny" class="conditionIcon" data-bind="attr: {src: imageIconSrc, title: basicConditionName, alt: basicConditionName}" />
 
     <div class="temp">
         High: <span data-bind="text: highTempFormatted"></span>
