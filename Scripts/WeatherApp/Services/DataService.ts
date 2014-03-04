@@ -1,4 +1,6 @@
 ﻿module Cachematrix.WeatherApp.Services {
+
+    import enums = Cachematrix.WeatherApp.Interfaces.Enums;
     import interfaces = Cachematrix.WeatherApp.Interfaces;
 
     var webserviceUrl: string = "http://somedefaultURL";
@@ -17,7 +19,7 @@
     {
         getData(): any {
             return {
-                currentConditions: { temp: 52, windSpeed: 5, windDirection: "NW" },
+                currentConditions: { temp: 52, windSpeed: 5, windDirection: "NW", basicCondition: enums.BasicCondition.Cloudy },
                 days: [
                     { dayIndex: 0, lowTemp: 51, highTemp: 52, windSpeed: 5, windDirection: "NW", humidity: 0.47, sunrise: 635, sunset: 1749, moonrise: 635, moonset: 1749, moonDesc: "Waning Crescent, 4% of the Moon is Illuminated" },
                     { dayIndex: 1, lowTemp: 53, highTemp: 54, windSpeed: 5, windDirection: "NW", humidity: 0.47, sunrise: 635, sunset: 1749, moonrise: 635, moonset: 1749, moonDesc: "Waning Crescent, 4% of the Moon is Illuminated" },

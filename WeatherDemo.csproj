@@ -133,7 +133,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\images\sunny.jpg" />
+    <Content Include="Content\images\cloudy.png" />
+    <Content Include="Content\images\rainy.png" />
+    <Content Include="Content\images\sunny.png" />
     <Content Include="Content\Site.css">
       <DependentUpon>Site.less</DependentUpon>
     </Content>

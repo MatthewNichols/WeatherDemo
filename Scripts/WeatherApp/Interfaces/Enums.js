@@ -3,16 +3,17 @@
     (function (WeatherApp) {
         (function (Interfaces) {
             (function (Enums) {
-                (function (Condition) {
-                    Condition[Condition["Sunny"] = 0] = "Sunny";
-                    Condition[Condition["Cloudy"] = 1] = "Cloudy";
-                })(Enums.Condition || (Enums.Condition = {}));
-                var Condition = Enums.Condition;
+                (function (BasicCondition) {
+                    BasicCondition[BasicCondition["Sunny"] = 0] = "Sunny";
+                    BasicCondition[BasicCondition["Cloudy"] = 1] = "Cloudy";
+                    BasicCondition[BasicCondition["Rainy"] = 2] = "Rainy";
+                })(Enums.BasicCondition || (Enums.BasicCondition = {}));
+                var BasicCondition = Enums.BasicCondition;
 
                 //Examples
-                //console.log(Condition.Cloudy); //Yields 1
-                //console.log(Condition[Condition.Cloudy]); //Yields "Cloudy"
-                //console.log(Condition["Cloudy"]); //Yields 1
+                //console.log(BasicCondition.Cloudy); //Yields 1
+                //console.log(BasicCondition[BasicCondition.Cloudy]); //Yields "Cloudy"
+                //console.log(BasicCondition["Cloudy"]); //Yields 1
                 (function (DayIndex) {
                     DayIndex[DayIndex["Today"] = 0] = "Today";
                     DayIndex[DayIndex["Tomorrow"] = 1] = "Tomorrow";

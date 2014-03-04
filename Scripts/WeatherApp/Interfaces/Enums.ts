@@ -1,14 +1,15 @@
 ﻿module Cachematrix.WeatherApp.Interfaces.Enums {
 
-    export enum Condition {
+    export enum BasicCondition {
         Sunny,
-        Cloudy
+        Cloudy,
+        Rainy
     }
 
     //Examples
-    //console.log(Condition.Cloudy); //Yields 1
-    //console.log(Condition[Condition.Cloudy]); //Yields "Cloudy"
-    //console.log(Condition["Cloudy"]); //Yields 1
+    //console.log(BasicCondition.Cloudy); //Yields 1
+    //console.log(BasicCondition[BasicCondition.Cloudy]); //Yields "Cloudy"
+    //console.log(BasicCondition["Cloudy"]); //Yields 1
 
     export enum DayIndex {
         Today,
