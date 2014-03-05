@@ -57,6 +57,9 @@ textarea {
   float: left;
   margin: 20px;
 }
+.currently .left .conditionIcon {
+  height: 160px;
+}
 .currently .right {
   float: left;
   margin: 20px;
