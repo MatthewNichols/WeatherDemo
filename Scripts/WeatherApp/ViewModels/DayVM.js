@@ -43,6 +43,8 @@
                     this.moonrise = ko.observable(day.moonrise);
                     this.moonset = ko.observable(day.moonset);
                     this.moonDesc = ko.observable(day.moonDesc);
+
+                    this.rawData = day;
                 }
                 return DayVM;
             })();

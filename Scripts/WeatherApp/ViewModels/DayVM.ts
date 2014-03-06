@@ -19,6 +19,8 @@
             this.moonrise = ko.observable(day.moonrise);
             this.moonset = ko.observable(day.moonset);
             this.moonDesc = ko.observable(day.moonDesc);
+
+            this.rawData = day;
         }
 
         public dayIndex: KnockoutObservable<enums.DayIndex>;
@@ -33,6 +35,8 @@
         public moonrise: KnockoutObservable<string>;
         public moonset: KnockoutObservable<string>;
         public moonDesc: KnockoutObservable<string>;
+
+        public rawData: services.DayData;
 
         public highTempFormatted: KnockoutComputed<string> = ko.computed({
             read: ()=> { return this.highTemp() + "° F"; },

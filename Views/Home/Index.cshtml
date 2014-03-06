@@ -16,24 +16,30 @@
         </div>
     </div>
     <div class="days">
-        <div class="today day">
-            <h4>Today</h4>
-            <div data-bind="template: {name: 'day-template', data: today }"></div>
+        <div class="today day" data-bind="with: today">
+            <div class="clickTarget" data-bind="click: $root.dayClickHandler">
+                <h4>Today</h4>
+                <div data-bind="template: {name: 'day-template' }"></div>
+            </div>
         </div>
-        <div class="tomorrow day">
-            <h4>Tomorrow</h4>
-            <div data-bind="template: {name: 'day-template', data: tomorrow }"></div>
+        <div class="tomorrow day" data-bind="with: tomorrow">
+            <div class="clickTarget" data-bind="click: $root.dayClickHandler">
+                <h4>Tomorrow</h4>
+                <div data-bind="template: {name: 'day-template'}"></div>
+            </div>
         </div>
-        <div class="dayAfterTomorrow day">
-            <h4>Day After Tomorrow</h4>
-            <div data-bind="template: {name: 'day-template', data: dayAfterTomorrow }"></div>
+        <div class="dayAfterTomorrow day" data-bind="with: dayAfterTomorrow">
+            <div class="clickTarget" data-bind="click: $root.dayClickHandler">
+                <h4>Day After Tomorrow</h4>
+                <div data-bind="template: {name: 'day-template' }"></div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="details" style="display: none;">
+<div class="details" data-bind="with: detailsPageVm">
     <div class="other section">
-        <div class="wind">Wind: 1-5 MPH SW</div>
+        <div class="wind">Wind: <span data-bind="text: windFormatted"></span> </div>
         <div class="humidity">Humidity: 47%</div>
     </div>
     <div class="sun section">
