@@ -14,7 +14,9 @@
         homePageVm: HomePageVM;            
         detailsPageVm: KnockoutObservable<DetailsPageVM>;
 
-        public dayClickHandler: Function = day => {
+        public dayClickHandler: Function = day =>
+        {
+            console.log(day);
             this.detailsPageVm(new DetailsPageVM(day.rawData));
         }
         

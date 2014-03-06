@@ -7,7 +7,7 @@
     export class DetailsPageVM implements interfaces.IPageVM {
 
         constructor(day: services.DayData) {
-
+            console.log(day);
             this.windSpeed = ko.observable(day.windSpeed);
             this.windDirection = ko.observable(day.windDirection);
             this.humidity = ko.observable(day.humidity);
@@ -31,6 +31,12 @@
             read: () => this.windSpeed() + " MPH " + enums.Direction[this.windDirection()],
             deferEvaluation: true
         });
+
+        public humidityFormatted: KnockoutComputed<string> = ko.computed({
+            read: () => this.humidity() * 100 + "%",
+            deferEvaluation: true
+        });
+
     } 
     
 }

@@ -40,16 +40,16 @@
 <div class="details" data-bind="with: detailsPageVm">
     <div class="other section">
         <div class="wind">Wind: <span data-bind="text: windFormatted"></span> </div>
-        <div class="humidity">Humidity: 47%</div>
+        <div class="humidity">Humidity: <span data-bind="text: humidityFormatted"></span></div>
     </div>
     <div class="sun section">
-        <div>Sunrise: 6:35 AM</div>
-        <div>Sunset: 5:49 PM</div>
+        <div>Sunrise: <span data-bind="text: sunrise"></span></div>
+        <div>Sunset: <span data-bind="text: sunset"></span></div>
     </div>
     <div class="moon section">
-        <div>Moonrise: 5:09 AM</div>
-        <div>Moonset: 4:18 PM</div>
-        <div>Waning Crescent, 4% of the Moon is Illuminated</div>
+        <div>Moonrise: <span data-bind="text: moonrise"></span></div>
+        <div>Moonset: <span data-bind="text: moonrise"></span></div>
+        <div><span data-bind="text: moonDesc"></span></div>
     </div>
 </div>
 

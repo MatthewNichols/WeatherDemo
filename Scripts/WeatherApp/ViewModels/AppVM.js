@@ -8,6 +8,7 @@
                     this.dataService = dataService;
                     this.dataMapper = dataMapper;
                     this.dayClickHandler = function (day) {
+                        console.log(day);
                         _this.detailsPageVm(new Cachematrix.WeatherApp.ViewModels.DetailsPageVM(day.rawData));
                     };
                     var data = dataService.getData();

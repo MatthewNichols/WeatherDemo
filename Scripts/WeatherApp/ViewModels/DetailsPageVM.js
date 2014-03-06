@@ -13,6 +13,13 @@
                         },
                         deferEvaluation: true
                     });
+                    this.humidityFormatted = ko.computed({
+                        read: function () {
+                            return _this.humidity() * 100 + "%";
+                        },
+                        deferEvaluation: true
+                    });
+                    console.log(day);
                     this.windSpeed = ko.observable(day.windSpeed);
                     this.windDirection = ko.observable(day.windDirection);
                     this.humidity = ko.observable(day.humidity);

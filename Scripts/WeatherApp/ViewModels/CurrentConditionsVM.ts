@@ -1,6 +1,7 @@
 ﻿module Cachematrix.WeatherApp.ViewModels 
 {
     import enums = Cachematrix.WeatherApp.Interfaces.Enums;
+    import services = Cachematrix.WeatherApp.Services;
 
     export class CurrentConditionsVM
     {
