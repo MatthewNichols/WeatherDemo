@@ -15,10 +15,11 @@ module Tests.CurrentConditions {
 
     import vms = Cachematrix.WeatherApp.ViewModels;
     import services = Cachematrix.WeatherApp.Services;
+    import models = Cachematrix.WeatherApp.Models;
 
     test("happy path", ()=> {
 
-        var data = new services.CurrentConditions();
+        var data = new models.CurrentConditions();
         data.temp = 23;
         var vm = new vms.CurrentConditionsVM(data);
 

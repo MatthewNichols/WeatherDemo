@@ -2,10 +2,11 @@
 
     import enums = Cachematrix.WeatherApp.Interfaces.Enums;
     import services = Cachematrix.WeatherApp.Services;
+    import models = Cachematrix.WeatherApp.Models;
 
     export class DayVM {
 
-        constructor(day: services.DayData) {
+        constructor(day: models.DayData) {
 
             this.dayIndex = ko.observable(day.dayIndex);
             this.lowTemp = ko.observable(day.lowTemp);
@@ -36,7 +37,7 @@
         public moonset: KnockoutObservable<string>;
         public moonDesc: KnockoutObservable<string>;
 
-        public rawData: services.DayData;
+        public rawData: models.DayData;
 
         public highTempFormatted: KnockoutComputed<string> = ko.computed({
             read: ()=> { return this.highTemp() + "° F"; },

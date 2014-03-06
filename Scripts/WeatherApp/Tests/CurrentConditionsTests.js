@@ -13,10 +13,11 @@ var Tests;
         QUnit.module("CurrentConditionsTests");
 
         var vms = Cachematrix.WeatherApp.ViewModels;
-        var services = Cachematrix.WeatherApp.Services;
+
+        var models = Cachematrix.WeatherApp.Models;
 
         test("happy path", function () {
-            var data = new services.CurrentConditions();
+            var data = new models.CurrentConditions();
             data.temp = 23;
             var vm = new vms.CurrentConditionsVM(data);
 

@@ -250,6 +250,9 @@
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IAppVM.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IDataService.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IPageVM.ts" />
+    <TypeScriptCompile Include="Scripts\WeatherApp\Models\CurrentConditions.ts" />
+    <TypeScriptCompile Include="Scripts\WeatherApp\Models\DayData.ts" />
+    <TypeScriptCompile Include="Scripts\WeatherApp\Models\WeatherData.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Services\DataMapper.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Services\DataService.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Tests\CurrentConditionsTests.ts" />

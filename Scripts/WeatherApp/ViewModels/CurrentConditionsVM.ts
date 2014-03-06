@@ -2,10 +2,11 @@
 {
     import enums = Cachematrix.WeatherApp.Interfaces.Enums;
     import services = Cachematrix.WeatherApp.Services;
+    import models = Cachematrix.WeatherApp.Models;
 
     export class CurrentConditionsVM
     {
-        constructor(data: services.CurrentConditions)
+        constructor(data: models.CurrentConditions)
         {
             this.temp = ko.observable(data.temp);
             this.windSpeed = ko.observable(data.windSpeed);

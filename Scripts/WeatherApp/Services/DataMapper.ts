@@ -2,13 +2,14 @@
 {
     import enums = Cachematrix.WeatherApp.Interfaces.Enums;
     import interfaces = Cachematrix.WeatherApp.Interfaces;
+    import models = Cachematrix.WeatherApp.Models;
 
     export class DataMapper  {
         constructor()
         {}
 
-        mapDataToWeatherData(data: any): WeatherData {
-            var output = new WeatherData();
+        mapDataToWeatherData(data: any): models.WeatherData {
+            var output = new models.WeatherData();
 
             if (data.currentConditions) {
                 output.currentConditions.temp = data.currentConditions.temp;
@@ -19,13 +20,13 @@
                 output.currentConditions.basicCondition = enums.BasicCondition[<string>data.currentConditions.basicCondition];
             }
 
-            output.days = new Array<DayData>();
+            output.days = new Array<models.DayData>();
             if (data.days)
             {
                 //TODO: can this be cleaner with underscore?
                 for (var i = 0; i < data.days.length; i++) {
                     var day = data.days[i];
-                    var dayData = new DayData();
+                    var dayData = new models.DayData();
 
                     dayData.dayIndex = day.dayIndex;
                     dayData.lowTemp = day.lowTemp;
@@ -48,35 +49,5 @@
 
             return output;
         }    
-    }
-    
-    export class WeatherData
-    {
-        public currentConditions: CurrentConditions = new CurrentConditions();
-        public days: Array<DayData>
-    }
-
-    export class CurrentConditions
-    {
-        public temp: number;
-        public windSpeed: number;
-        public windDirection: enums.Direction;
-        public basicCondition: enums.BasicCondition;
-    }
-
-    export class DayData
-    {
-        public dayIndex: enums.DayIndex;
-        public lowTemp: number;
-        public highTemp: number;
-        public windSpeed: number;
-        public windDirection: enums.Direction;
-        public basicCondition: enums.BasicCondition;
-        public humidity: number;
-        public sunrise: string;
-        public sunset: string;
-        public moonrise: string;
-        public moonset: string;
-        public moonDesc: string;
     }
 }

@@ -3,10 +3,11 @@
     import enums = Cachematrix.WeatherApp.Interfaces.Enums;
     import interfaces = Cachematrix.WeatherApp.Interfaces;
     import services = Cachematrix.WeatherApp.Services;
+    import models = Cachematrix.WeatherApp.Models;
 
     export class HomePageVM implements interfaces.IPageVM
     {
-        constructor(data: services.WeatherData) {
+        constructor(data: models.WeatherData) {
             this.currentConditions = new CurrentConditionsVM(data.currentConditions);
 
             this.days = _.map(data.days, (day)=> {

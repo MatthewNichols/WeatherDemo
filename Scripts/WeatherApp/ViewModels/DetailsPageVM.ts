@@ -3,10 +3,11 @@
     import enums = Cachematrix.WeatherApp.Interfaces.Enums;
     import interfaces = Cachematrix.WeatherApp.Interfaces;
     import services = Cachematrix.WeatherApp.Services;
+    import models = Cachematrix.WeatherApp.Models;
 
     export class DetailsPageVM implements interfaces.IPageVM {
 
-        constructor(day: services.DayData) {
+        constructor(day: models.DayData) {
             console.log(day);
             this.windSpeed = ko.observable(day.windSpeed);
             this.windDirection = ko.observable(day.windDirection);
