@@ -1,4 +1,5 @@
-﻿var Cachematrix;
+﻿/// <reference path="../typings/jquery/jquery.d.ts" />
+var Cachematrix;
 (function (Cachematrix) {
     (function (WeatherApp) {
         var vms = Cachematrix.WeatherApp.ViewModels;
@@ -7,7 +8,9 @@
         function init() {
             var dataService = services.getDataService();
             var dataMapper = new services.DataMapper();
-            var appVm = new vms.AppVM(dataService, dataMapper);
+            var pageTransitionsService = new services.PageTransitionsService($, "#main-page", "#details-page");
+
+            var appVm = new vms.AppVM(dataService, dataMapper, pageTransitionsService);
 
             console.log(appVm);
 

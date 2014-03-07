@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
 }
 
-<div data-bind="with: homePageVm">
+<div id="main-page" class="page-section current-page" data-bind="with: homePageVm">
     <div class="currently" data-bind="with: currentConditions">
         <h4>Currently</h4>
         <div class="left">
@@ -37,7 +37,10 @@
     </div>
 </div>
 
-<div class="details" data-bind="with: detailsPageVm">
+<div id="details-page" class="page-section" data-bind="with: detailsPageVm">
+    
+    <a class="backLink" href="#" data-bind="click: $root.backClickHandler">Back</a>
+
     <div class="other section">
         <div class="wind">Wind: <span data-bind="text: windFormatted"></span> </div>
         <div class="humidity">Humidity: <span data-bind="text: humidityFormatted"></span></div>

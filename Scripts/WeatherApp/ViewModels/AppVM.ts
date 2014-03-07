@@ -4,7 +4,8 @@
     import services = Cachematrix.WeatherApp.Services;
 
     export class AppVM {
-        constructor(private dataService: interfaces.IDataService, private dataMapper: services.DataMapper) {
+        constructor(private dataService: interfaces.IDataService, private dataMapper: services.DataMapper, public pageTransitionsService: services.PageTransitionsService)
+        {
             var data = dataService.getData();
             var weatherData = dataMapper.mapDataToWeatherData(data);
             this.homePageVm = new HomePageVM(weatherData);
@@ -18,8 +19,14 @@
         {
             console.log(day);
             this.detailsPageVm(new DetailsPageVM(day.rawData));
+            this.pageTransitionsService.moveToDetailsScreen();
         }
         
+        public backClickHandler: Function = () =>
+        {
+            console.log('back');
+            this.pageTransitionsService.moveToMainScreen();
+        }
     }
 
 }

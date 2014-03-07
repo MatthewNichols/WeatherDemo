@@ -255,6 +255,7 @@
     <TypeScriptCompile Include="Scripts\WeatherApp\Models\WeatherData.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Services\DataMapper.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Services\DataService.ts" />
+    <TypeScriptCompile Include="Scripts\WeatherApp\Services\PageTransitionsService.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Tests\CurrentConditionsTests.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Tests\DataMapperTests.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\ViewModels\AppVM.ts" />

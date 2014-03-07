@@ -3,13 +3,19 @@
     (function (WeatherApp) {
         (function (ViewModels) {
             var AppVM = (function () {
-                function AppVM(dataService, dataMapper) {
+                function AppVM(dataService, dataMapper, pageTransitionsService) {
                     var _this = this;
                     this.dataService = dataService;
                     this.dataMapper = dataMapper;
+                    this.pageTransitionsService = pageTransitionsService;
                     this.dayClickHandler = function (day) {
                         console.log(day);
                         _this.detailsPageVm(new Cachematrix.WeatherApp.ViewModels.DetailsPageVM(day.rawData));
+                        _this.pageTransitionsService.moveToDetailsScreen();
+                    };
+                    this.backClickHandler = function () {
+                        console.log('back');
+                        _this.pageTransitionsService.moveToMainScreen();
                     };
                     var data = dataService.getData();
                     var weatherData = dataMapper.mapDataToWeatherData(data);
