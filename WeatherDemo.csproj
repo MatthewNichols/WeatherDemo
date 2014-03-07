@@ -249,6 +249,7 @@
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\Enums.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IAppVM.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IDataService.ts" />
+    <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IPageTransitionService.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IPageVM.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Models\CurrentConditions.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Models\DayData.ts" />
@@ -256,6 +257,7 @@
     <TypeScriptCompile Include="Scripts\WeatherApp\Services\DataMapper.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Services\DataService.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Services\PageTransitionsService.ts" />
+    <TypeScriptCompile Include="Scripts\WeatherApp\Tests\AppVMTests.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Tests\CurrentConditionsTests.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Tests\DataMapperTests.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\ViewModels\AppVM.ts" />

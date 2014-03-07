@@ -2,9 +2,11 @@
 
 module Cachematrix.WeatherApp.Services
 {
-    var currentPageClassName = "current-page";
+    import interfaces = Cachematrix.WeatherApp.Interfaces;
 
-    export class PageTransitionsService
+    var currentPageClassName = "current-page";
+    
+    export class PageTransitionsService implements interfaces.IPageTransitionsService
     {
         constructor($: JQueryStatic, private mainScreenSelector: string, private detailsScreenSelector: string) {
             this.mainScreen = $(mainScreenSelector);

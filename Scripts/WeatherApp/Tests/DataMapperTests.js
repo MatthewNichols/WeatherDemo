@@ -4,6 +4,7 @@
 /// <reference path="../services/datamapper.ts" />
 var Tests;
 (function (Tests) {
+    //Pretty important to put modules around Unit tests because otherwise the imports from different tests run into each other.
     (function (DataMapper) {
         QUnit.module("DataMapperTests");
 
@@ -29,8 +30,6 @@ var Tests;
             equal(weatherData.currentConditions.windDirection, 7 /* NW */);
 
             equal(weatherData.days.length, 3);
-
-            console.log(weatherData.days[0]);
 
             equal(weatherData.days[0].dayIndex, 0 /* Today */);
             equal(weatherData.days[0].lowTemp, 50);

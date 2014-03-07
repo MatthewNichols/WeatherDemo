@@ -3,6 +3,7 @@
 /// <reference path="../interfaces/enums.ts" />
 /// <reference path="../services/datamapper.ts" />
 
+//Pretty important to put modules around Unit tests because otherwise the imports from different tests run into each other.
 module Tests.DataMapper {
 
     QUnit.module("DataMapperTests");
@@ -30,8 +31,6 @@ module Tests.DataMapper {
 
         equal(weatherData.days.length, 3);
 
-        console.log(weatherData.days[0]);
-
         equal(weatherData.days[0].dayIndex, enums.DayIndex.Today);
         equal(weatherData.days[0].lowTemp, 50);
         equal(weatherData.days[0].highTemp, 60);
@@ -45,7 +44,5 @@ module Tests.DataMapper {
 
         equal(weatherData.days[1].dayIndex, enums.DayIndex.Tomorrow);
         equal(weatherData.days[2].dayIndex, enums.DayIndex.DayAfterTomorrow);
-
-
     });
 }
