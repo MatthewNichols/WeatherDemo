@@ -34,15 +34,7 @@
                     this.dayIndex = ko.observable(day.dayIndex);
                     this.lowTemp = ko.observable(day.lowTemp);
                     this.highTemp = ko.observable(day.highTemp);
-                    this.windSpeed = ko.observable(day.windSpeed);
-                    this.windDirection = ko.observable(day.windDirection);
                     this.basicCondition = ko.observable(day.basicCondition);
-                    this.humidity = ko.observable(day.humidity);
-                    this.sunrise = ko.observable(day.sunrise);
-                    this.sunset = ko.observable(day.sunset);
-                    this.moonrise = ko.observable(day.moonrise);
-                    this.moonset = ko.observable(day.moonset);
-                    this.moonDesc = ko.observable(day.moonDesc);
 
                     this.rawData = day;
                 }
