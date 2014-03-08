@@ -4,7 +4,8 @@
     import interfaces = Cachematrix.WeatherApp.Interfaces;
     import models = Cachematrix.WeatherApp.Models;
 
-    export class DataMapper  {
+    export class DataMapper implements interfaces.IDataMapper  {
+
         constructor()
         {}
 

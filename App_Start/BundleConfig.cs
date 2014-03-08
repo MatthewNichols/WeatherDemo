@@ -16,6 +16,7 @@ namespace WeatherDemo
 
             bundles.Add(new ScriptBundle("~/bundles/weatherapp")
                 .IncludeDirectory("~/Scripts/WeatherApp/Interfaces", "*.js")
+                .IncludeDirectory("~/Scripts/WeatherApp/Models", "*.js")
                 .IncludeDirectory("~/Scripts/WeatherApp/Services", "*.js")
                 .IncludeDirectory("~/Scripts/WeatherApp/ViewModels", "*.js")
                 .Include("~/Scripts/WeatherApp/Init.js")

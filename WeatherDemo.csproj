@@ -248,6 +248,7 @@
     <TypeScriptCompile Include="Scripts\WeatherApp\Init.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\Enums.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IAppVM.ts" />
+    <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IDataMapper.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IDataService.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IPageTransitionService.ts" />
     <TypeScriptCompile Include="Scripts\WeatherApp\Interfaces\IPageVM.ts" />

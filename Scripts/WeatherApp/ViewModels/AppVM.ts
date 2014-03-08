@@ -4,7 +4,7 @@
     import services = Cachematrix.WeatherApp.Services;
 
     export class AppVM {
-        constructor(private dataService: interfaces.IDataService, private dataMapper: services.DataMapper, public pageTransitionsService: interfaces.IPageTransitionsService)
+        constructor(private dataService: interfaces.IDataService, private dataMapper: interfaces.IDataMapper, public pageTransitionsService: interfaces.IPageTransitionsService)
         {
             var data = dataService.getData();
             var weatherData = dataMapper.mapDataToWeatherData(data);
