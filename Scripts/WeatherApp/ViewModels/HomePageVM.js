@@ -29,6 +29,9 @@
                         return new Cachematrix.WeatherApp.ViewModels.DayVM(day);
                     });
                 }
+                HomePageVM.prototype.init = function () {
+                    //Nothing to do here
+                };
                 return HomePageVM;
             })();
             ViewModels.HomePageVM = HomePageVM;

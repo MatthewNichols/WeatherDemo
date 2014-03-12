@@ -13,15 +13,11 @@ var Cachematrix;
                     this.detailsScreen = $(detailsScreenSelector);
                 }
                 PageTransitionsService.prototype.moveToDetailsScreen = function () {
-                    console.log("moveToDetailsScreen");
-
                     this.mainScreen.removeClass(currentPageClassName);
                     this.detailsScreen.addClass(currentPageClassName);
                 };
 
                 PageTransitionsService.prototype.moveToMainScreen = function () {
-                    console.log("moveToMainScreen");
-
                     this.detailsScreen.removeClass(currentPageClassName);
                     this.mainScreen.addClass(currentPageClassName);
                 };

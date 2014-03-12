@@ -20,7 +20,7 @@ module Tests.CurrentConditions {
     import services = Cachematrix.WeatherApp.Services;
     import models = Cachematrix.WeatherApp.Models;
 
-    test("happy path", ()=> {
+    test("happy path test", ()=> {
 
         var data = new models.CurrentConditions();
         data.temp = 23;

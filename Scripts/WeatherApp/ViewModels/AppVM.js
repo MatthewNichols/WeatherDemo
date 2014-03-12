@@ -8,19 +8,24 @@
                     this.dataService = dataService;
                     this.dataMapper = dataMapper;
                     this.pageTransitionsService = pageTransitionsService;
+                    /**
+                    * Handles the clicks on the day regions and transitions to the details screen
+                    * @param {DayVM} day - A DayVM for the day to transition to the Details screen
+                    */
                     this.dayClickHandler = function (day) {
-                        console.log(day);
-                        _this.detailsPageVm(new Cachematrix.WeatherApp.ViewModels.DetailsPageVM(day.rawData));
+                        _this.detailsPageVm.init(day.rawData);
                         _this.pageTransitionsService.moveToDetailsScreen();
                     };
+                    /**
+                    * Handles the clicks on Details back button
+                    */
                     this.backClickHandler = function () {
-                        console.log('back');
                         _this.pageTransitionsService.moveToMainScreen();
                     };
                     var data = dataService.getData();
                     var weatherData = dataMapper.mapDataToWeatherData(data);
                     this.homePageVm = new Cachematrix.WeatherApp.ViewModels.HomePageVM(weatherData);
-                    this.detailsPageVm = ko.observable(new Cachematrix.WeatherApp.ViewModels.DetailsPageVM(weatherData.days[0]));
+                    this.detailsPageVm = new Cachematrix.WeatherApp.ViewModels.DetailsPageVM();
                 }
                 return AppVM;
             })();

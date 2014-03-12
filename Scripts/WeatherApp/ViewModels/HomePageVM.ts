@@ -15,6 +15,10 @@
             });
         }
 
+        public init() {
+            //Nothing to do here
+        }
+
         public currentConditions: CurrentConditionsVM;
         public days: Array<DayVM>
 

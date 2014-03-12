@@ -20,7 +20,7 @@ var Tests;
 
         var models = Cachematrix.WeatherApp.Models;
 
-        test("happy path", function () {
+        test("happy path test", function () {
             var data = new models.CurrentConditions();
             data.temp = 23;
             data.windSpeed = 12;

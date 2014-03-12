@@ -6,27 +6,26 @@
     import models = Cachematrix.WeatherApp.Models;
 
     export class DetailsPageVM implements interfaces.IPageVM {
-
-        constructor(day: models.DayData) {
-            console.log(day);
-            this.windSpeed = ko.observable(day.windSpeed);
-            this.windDirection = ko.observable(day.windDirection);
-            this.humidity = ko.observable(day.humidity);
-            this.sunrise = ko.observable(day.sunrise);
-            this.sunset = ko.observable(day.sunset);
-            this.moonrise = ko.observable(day.moonrise);
-            this.moonset = ko.observable(day.moonset);
-            this.moonDesc = ko.observable(day.moonDesc);
-        }
         
-        public windSpeed: KnockoutObservable<number>;
-        public windDirection: KnockoutObservable<enums.Direction>;
-        public humidity: KnockoutObservable<number>;
-        public sunrise: KnockoutObservable<string>;
-        public sunset: KnockoutObservable<string>;
-        public moonrise: KnockoutObservable<string>;
-        public moonset: KnockoutObservable<string>;
-        public moonDesc: KnockoutObservable<string>;
+        public init(day: models.DayData) {
+            this.windSpeed(day.windSpeed);
+            this.windDirection(day.windDirection);
+            this.humidity(day.humidity);
+            this.sunrise(day.sunrise);
+            this.sunset(day.sunset);
+            this.moonrise(day.moonrise);
+            this.moonset(day.moonset);
+            this.moonDesc(day.moonDesc);
+        }
+
+        public windSpeed: KnockoutObservable<number> = ko.observable(null);
+        public windDirection: KnockoutObservable<enums.Direction> = ko.observable(null);
+        public humidity: KnockoutObservable<number> = ko.observable(null);
+        public sunrise: KnockoutObservable<string> = ko.observable(null);
+        public sunset: KnockoutObservable<string> = ko.observable(null);
+        public moonrise: KnockoutObservable<string> = ko.observable(null);
+        public moonset: KnockoutObservable<string> = ko.observable(null);
+        public moonDesc: KnockoutObservable<string> = ko.observable(null);
 
         public windFormatted: KnockoutComputed<string> = ko.computed({
             read: () => this.windSpeed() + " MPH " + enums.Direction[this.windDirection()],

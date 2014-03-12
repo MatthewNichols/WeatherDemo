@@ -16,17 +16,14 @@ module Cachematrix.WeatherApp.Services
         private mainScreen: JQuery;
         private detailsScreen: JQuery;
 
-        public moveToDetailsScreen() : void {
-            console.log("moveToDetailsScreen");
-                    
+        public moveToDetailsScreen(): void 
+        {
             this.mainScreen.removeClass(currentPageClassName);
             this.detailsScreen.addClass(currentPageClassName);
         }
 
         public moveToMainScreen(): void
         {
-            console.log("moveToMainScreen");
-
             this.detailsScreen.removeClass(currentPageClassName);
             this.mainScreen.addClass(currentPageClassName);
         }

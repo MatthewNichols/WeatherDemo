@@ -5,8 +5,16 @@
             var enums = Cachematrix.WeatherApp.Interfaces.Enums;
 
             var DetailsPageVM = (function () {
-                function DetailsPageVM(day) {
+                function DetailsPageVM() {
                     var _this = this;
+                    this.windSpeed = ko.observable(null);
+                    this.windDirection = ko.observable(null);
+                    this.humidity = ko.observable(null);
+                    this.sunrise = ko.observable(null);
+                    this.sunset = ko.observable(null);
+                    this.moonrise = ko.observable(null);
+                    this.moonset = ko.observable(null);
+                    this.moonDesc = ko.observable(null);
                     this.windFormatted = ko.computed({
                         read: function () {
                             return _this.windSpeed() + " MPH " + enums.Direction[_this.windDirection()];
@@ -19,16 +27,17 @@
                         },
                         deferEvaluation: true
                     });
-                    console.log(day);
-                    this.windSpeed = ko.observable(day.windSpeed);
-                    this.windDirection = ko.observable(day.windDirection);
-                    this.humidity = ko.observable(day.humidity);
-                    this.sunrise = ko.observable(day.sunrise);
-                    this.sunset = ko.observable(day.sunset);
-                    this.moonrise = ko.observable(day.moonrise);
-                    this.moonset = ko.observable(day.moonset);
-                    this.moonDesc = ko.observable(day.moonDesc);
                 }
+                DetailsPageVM.prototype.init = function (day) {
+                    this.windSpeed(day.windSpeed);
+                    this.windDirection(day.windDirection);
+                    this.humidity(day.humidity);
+                    this.sunrise(day.sunrise);
+                    this.sunset(day.sunset);
+                    this.moonrise(day.moonrise);
+                    this.moonset(day.moonset);
+                    this.moonDesc(day.moonDesc);
+                };
                 return DetailsPageVM;
             })();
             ViewModels.DetailsPageVM = DetailsPageVM;

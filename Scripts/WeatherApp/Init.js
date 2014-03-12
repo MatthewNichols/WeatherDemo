@@ -12,8 +12,6 @@ var Cachematrix;
 
             var appVm = new vms.AppVM(dataService, dataMapper, pageTransitionsService);
 
-            console.log(appVm);
-
             ko.applyBindings(appVm);
         }
         WeatherApp.init = init;

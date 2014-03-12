@@ -12,9 +12,7 @@ module Cachematrix.WeatherApp
          var pageTransitionsService = new services.PageTransitionsService($, "#main-page", "#details-page");
 
          var appVm = new vms.AppVM(dataService, dataMapper, pageTransitionsService);
-
-         console.log(appVm);
-
+         
          ko.applyBindings(appVm);
      }
 

@@ -9,22 +9,27 @@
             var data = dataService.getData();
             var weatherData = dataMapper.mapDataToWeatherData(data);
             this.homePageVm = new HomePageVM(weatherData);
-            this.detailsPageVm = ko.observable(new DetailsPageVM(weatherData.days[0]));
+            this.detailsPageVm = new DetailsPageVM();
         }
 
         homePageVm: HomePageVM;            
-        detailsPageVm: KnockoutObservable<DetailsPageVM>;
+        detailsPageVm: DetailsPageVM;
 
-        public dayClickHandler: Function = day =>
+        /**
+         * Handles the clicks on the day regions and transitions to the details screen
+         * @param {DayVM} day - A DayVM for the day to transition to the Details screen
+         */
+        public dayClickHandler: Function = (day: DayVM) =>
         {
-            console.log(day);
-            this.detailsPageVm(new DetailsPageVM(day.rawData));
+            this.detailsPageVm.init(day.rawData);
             this.pageTransitionsService.moveToDetailsScreen();
         }
         
+        /**
+         * Handles the clicks on Details back button
+         */
         public backClickHandler: Function = () =>
         {
-            console.log('back');
             this.pageTransitionsService.moveToMainScreen();
         }
     }
