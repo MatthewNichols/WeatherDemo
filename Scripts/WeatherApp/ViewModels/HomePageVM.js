@@ -1,6 +1,8 @@
-﻿var Cachematrix;
+var Cachematrix;
 (function (Cachematrix) {
+    var WeatherApp;
     (function (WeatherApp) {
+        var ViewModels;
         (function (ViewModels) {
             var HomePageVM = (function () {
                 function HomePageVM(data) {
@@ -23,10 +25,9 @@
                         },
                         deferEvaluation: true
                     });
-                    this.currentConditions = new Cachematrix.WeatherApp.ViewModels.CurrentConditionsVM(data.currentConditions);
-
+                    this.currentConditions = new ViewModels.CurrentConditionsVM(data.currentConditions);
                     this.days = _.map(data.days, function (day) {
-                        return new Cachematrix.WeatherApp.ViewModels.DayVM(day);
+                        return new ViewModels.DayVM(day);
                     });
                 }
                 HomePageVM.prototype.init = function () {
@@ -35,9 +36,7 @@
                 return HomePageVM;
             })();
             ViewModels.HomePageVM = HomePageVM;
-        })(WeatherApp.ViewModels || (WeatherApp.ViewModels = {}));
-        var ViewModels = WeatherApp.ViewModels;
-    })(Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
-    var WeatherApp = Cachematrix.WeatherApp;
+        })(ViewModels = WeatherApp.ViewModels || (WeatherApp.ViewModels = {}));
+    })(WeatherApp = Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
 })(Cachematrix || (Cachematrix = {}));
 //# sourceMappingURL=HomePageVM.js.map

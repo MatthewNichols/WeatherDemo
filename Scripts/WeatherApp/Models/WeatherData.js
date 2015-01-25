@@ -1,17 +1,17 @@
-﻿var Cachematrix;
+var Cachematrix;
 (function (Cachematrix) {
+    var WeatherApp;
     (function (WeatherApp) {
+        var Models;
         (function (Models) {
             var WeatherData = (function () {
                 function WeatherData() {
-                    this.currentConditions = new Cachematrix.WeatherApp.Models.CurrentConditions();
+                    this.currentConditions = new Models.CurrentConditions();
                 }
                 return WeatherData;
             })();
             Models.WeatherData = WeatherData;
-        })(WeatherApp.Models || (WeatherApp.Models = {}));
-        var Models = WeatherApp.Models;
-    })(Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
-    var WeatherApp = Cachematrix.WeatherApp;
+        })(Models = WeatherApp.Models || (WeatherApp.Models = {}));
+    })(WeatherApp = Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
 })(Cachematrix || (Cachematrix = {}));
 //# sourceMappingURL=WeatherData.js.map

@@ -1,19 +1,18 @@
-﻿var Cachematrix;
+var Cachematrix;
 (function (Cachematrix) {
+    var WeatherApp;
     (function (WeatherApp) {
+        var Services;
         (function (Services) {
             var webserviceUrl = "http://somedefaultURL";
-
             function getDataService(webserviceUrl) {
                 //If a webserviceUrl is specified then override the default.
                 if (webserviceUrl != null) {
                     this.webserviceUrl = webserviceUrl;
                 }
-
                 return new DataService();
             }
             Services.getDataService = getDataService;
-
             var DataService = (function () {
                 function DataService() {
                 }
@@ -30,9 +29,7 @@
                 return DataService;
             })();
             Services.DataService = DataService;
-        })(WeatherApp.Services || (WeatherApp.Services = {}));
-        var Services = WeatherApp.Services;
-    })(Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
-    var WeatherApp = Cachematrix.WeatherApp;
+        })(Services = WeatherApp.Services || (WeatherApp.Services = {}));
+    })(WeatherApp = Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
 })(Cachematrix || (Cachematrix = {}));
 //# sourceMappingURL=DataService.js.map

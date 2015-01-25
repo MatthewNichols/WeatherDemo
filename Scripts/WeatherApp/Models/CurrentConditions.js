@@ -1,6 +1,8 @@
-﻿var Cachematrix;
+var Cachematrix;
 (function (Cachematrix) {
+    var WeatherApp;
     (function (WeatherApp) {
+        var Models;
         (function (Models) {
             var CurrentConditions = (function () {
                 function CurrentConditions() {
@@ -8,9 +10,7 @@
                 return CurrentConditions;
             })();
             Models.CurrentConditions = CurrentConditions;
-        })(WeatherApp.Models || (WeatherApp.Models = {}));
-        var Models = WeatherApp.Models;
-    })(Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
-    var WeatherApp = Cachematrix.WeatherApp;
+        })(Models = WeatherApp.Models || (WeatherApp.Models = {}));
+    })(WeatherApp = Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
 })(Cachematrix || (Cachematrix = {}));
 //# sourceMappingURL=CurrentConditions.js.map

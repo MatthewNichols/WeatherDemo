@@ -1,9 +1,10 @@
-﻿var Cachematrix;
+var Cachematrix;
 (function (Cachematrix) {
+    var WeatherApp;
     (function (WeatherApp) {
+        var ViewModels;
         (function (ViewModels) {
             var enums = Cachematrix.WeatherApp.Interfaces.Enums;
-
             var CurrentConditionsVM = (function () {
                 function CurrentConditionsVM(data) {
                     var _this = this;
@@ -40,9 +41,7 @@
                 return CurrentConditionsVM;
             })();
             ViewModels.CurrentConditionsVM = CurrentConditionsVM;
-        })(WeatherApp.ViewModels || (WeatherApp.ViewModels = {}));
-        var ViewModels = WeatherApp.ViewModels;
-    })(Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
-    var WeatherApp = Cachematrix.WeatherApp;
+        })(ViewModels = WeatherApp.ViewModels || (WeatherApp.ViewModels = {}));
+    })(WeatherApp = Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
 })(Cachematrix || (Cachematrix = {}));
-//# sourceMappingURL=CurrentConditionsVM.js.map
+//# sourceMappingURL=currentconditionsvm.js.map

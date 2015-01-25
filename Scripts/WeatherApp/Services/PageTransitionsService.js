@@ -1,10 +1,11 @@
-﻿/// <reference path="../../typings/jquery/jquery.d.ts" />
+/// <reference path="../../typings/jquery/jquery.d.ts" />
 var Cachematrix;
 (function (Cachematrix) {
+    var WeatherApp;
     (function (WeatherApp) {
+        var Services;
         (function (Services) {
             var currentPageClassName = "current-page";
-
             var PageTransitionsService = (function () {
                 function PageTransitionsService($, mainScreenSelector, detailsScreenSelector) {
                     this.mainScreenSelector = mainScreenSelector;
@@ -16,7 +17,6 @@ var Cachematrix;
                     this.mainScreen.removeClass(currentPageClassName);
                     this.detailsScreen.addClass(currentPageClassName);
                 };
-
                 PageTransitionsService.prototype.moveToMainScreen = function () {
                     this.detailsScreen.removeClass(currentPageClassName);
                     this.mainScreen.addClass(currentPageClassName);
@@ -24,9 +24,7 @@ var Cachematrix;
                 return PageTransitionsService;
             })();
             Services.PageTransitionsService = PageTransitionsService;
-        })(WeatherApp.Services || (WeatherApp.Services = {}));
-        var Services = WeatherApp.Services;
-    })(Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
-    var WeatherApp = Cachematrix.WeatherApp;
+        })(Services = WeatherApp.Services || (WeatherApp.Services = {}));
+    })(WeatherApp = Cachematrix.WeatherApp || (Cachematrix.WeatherApp = {}));
 })(Cachematrix || (Cachematrix = {}));
 //# sourceMappingURL=PageTransitionsService.js.map
